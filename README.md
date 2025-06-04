@@ -5,13 +5,13 @@ Lightweight BPMN-like flow designer built with React Flow, Zustand and TailwindC
 ## Install
 
 ```bash
-npm install @kraldev/saga-flow-designer
+npm install @osabun/saga-flow-designer
 ```
 
 ## Usage
 
 ```tsx
-import { FlowCanvas } from '@kraldev/saga-flow-designer'
+import { FlowCanvas } from '@osabun/saga-flow-designer'
 
 <FlowCanvas />
 ```
