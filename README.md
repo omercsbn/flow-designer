@@ -1,4 +1,4 @@
-# @kraldev/saga-flow-designer
+# @osabun/saga-flow-designer
 
 Lightweight BPMN-like flow designer built with React Flow, Zustand and TailwindCSS.
 
