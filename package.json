@@ -1,5 +1,5 @@
 {
-  "name": "@kraldev/saga-flow-designer",
+  "name": "@osabun/saga-flow-designer",
   "version": "0.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,6 +24,9 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
     "typescript": "^5.0.0",
     "tsup": "^7.0.0",
     "vite": "^5.0.0",
