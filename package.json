@@ -35,7 +35,9 @@
     "build": "tsup src/index.ts --format esm,cjs --dts --out-dir dist && npm run build:css",
     "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
   },
   "peerDependencies": {
     "react": "^18.0.0",
