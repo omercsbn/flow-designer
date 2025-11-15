@@ -1,4 +1,4 @@
-import { FlowDefinition, Phase } from "../types";
+import { FlowDefinition } from "../types";
 
 export function exportFlow(flow: FlowDefinition): string {
   return JSON.stringify(flow, null, 2);

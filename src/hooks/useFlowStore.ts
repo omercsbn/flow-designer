@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 import { FlowDefinition, Phase } from "../types";
 import { topoSort } from "../utils/topoSort";
 
@@ -10,7 +10,7 @@ interface FlowState {
   removePhase: (phaseId: string) => void;
 }
 
-export const useFlowStore = create<FlowState>((set, get) => ({
+export const useFlowStore = create<FlowState>((set) => ({
   flow: { phases: [], positions: {} },
   setFlow: (flow) => set({ flow }),
   addPhase: (phase) =>

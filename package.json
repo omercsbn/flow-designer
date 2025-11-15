@@ -1,32 +1,63 @@
 {
-  "name": "@kraldev/saga-flow-designer",
+  "name": "@osabun/saga-flow-designer",
   "version": "0.1.0",
+  "description": "Lightweight BPMN-like flow designer built with React Flow, Zustand and TailwindCSS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "license": "MIT",
+  "author": "Ömercan Sabun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omercsbn/flow-designer"
+  },
+  "keywords": [
+    "react",
+    "flow",
+    "bpmn",
+    "workflow",
+    "diagram",
+    "saga",
+    "react-flow",
+    "zustand"
+  ],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir dist",
+    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir dist && npm run build:css",
+    "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "reactflow": "^11.0.0",
     "zustand": "^4.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "typescript": "^5.0.0",
-    "tsup": "^7.0.0",
-    "vite": "^5.0.0",
+    "tsup": "^8.5.1",
+    "vite": "^7.2.2",
     "tailwindcss": "^3.0.0"
   }
 }
